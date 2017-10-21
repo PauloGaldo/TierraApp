@@ -1,0 +1,24 @@
+{
+  "name": "ar.com.tierra.app",
+  "description": "A sample Apache Cordova application that responds to the deviceready event.",
+  "main": "index.js",
+  "authors": [
+    "Apache Cordova Team"
+  ],
+  "license": "Apache-2.0",
+  "keywords": [
+    "Tierra"
+  ],
+  "homepage": "https://github.com/PauloGaldo/TierraApp",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "ngCordova": "^0.1.27-alpha"
+  }
+}
