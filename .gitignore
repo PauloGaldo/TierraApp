@@ -1,0 +1,8 @@
+/node_modules
+/nbproject
+/platform/android
+/platform/browser
+/platforms/android/
+/platforms/browser/
+/plugins/cordova-plugin-browsersync/
+/plugins/cordova-plugin-whitelist/
