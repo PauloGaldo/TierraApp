@@ -1,0 +1,37 @@
+<section layout="row" flex>
+    <md-sidenav
+        class="md-sidenav-left"
+        md-component-id="left"
+        md-whiteframe="5">
+        <md-toolbar class="md-theme-indigo" style="height: 120px;">
+            <md-contant layout="row" layout-padding>
+                <div flex="30">
+                    <img ng-src="data:image/JPEG;base64,{{sidenav.user.imagen}}" class="md-avatar" id="avatar">
+                </div>
+                <div flex="70">
+                    <h3 style="font-weight: bolder; margin-bottom: 0px;">¡Hola {{sidenav.user.nombre}}!</h3>        
+                    <h3 style="font-size: 15px; font-weight: normal; margin-top: 0px;">{{sidenav.user.email}}</h3>        
+                </div>
+            </md-contant>
+        </md-toolbar>
+        <md-content>
+            <md-list flex>
+                <md-list-item class="md-3-line" ng-click="sidenav.goToProfile(sidenav.user.idUsuario)">
+                    <i class="material-icons">&#xE7FD;</i>
+                    <div class="md-list-item-text" layout="column" style="margin-left: 15px;">
+                        <h3>Mi cuenta</h3>                        
+                    </div>
+                </md-list-item>
+                <md-divider ></md-divider>
+            </md-list>
+        </md-content>
+    </md-sidenav>
+</section>
+<style>
+    #avatar{
+        border-radius: 40px;
+        border: 1px solid #ddd;
+        width: 80px;
+        height: 80px;
+    }
+</style>
