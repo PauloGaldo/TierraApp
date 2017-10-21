@@ -10,6 +10,7 @@
         'ngSanitize',
         /*Librerias de terceros*/
         'ui.router',
+        'ngCordova',
         /*Medulos proyecto*/
         'tierra.code.home',
         'tierra.code.header',

@@ -18,8 +18,9 @@
     under the License.
 -->
 <html ng-app="tierra.code">
-    <head>
-        <!--
+
+<head>
+    <!--
         Customize this policy to fit your own app's needs. For more guidance, see:
             https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
         Some notes:
@@ -28,37 +29,41 @@
             * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
-        <meta name="format-detection" content="telephone=no">
-        <meta name="msapplication-tap-highlight" content="no">
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-        <link rel="stylesheet" type="text/css" href="styles/main.css">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link href="styles/angular-material.min.css" rel="stylesheet" type="text/css"/>
-        <title>TierraCode</title>
-    </head>
-    <body ng-cloak>
-        <div ui-view="header"></div>
-        <div ui-view="body"></div>        
-        <div ui-view="sidenav"></div>        
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="styles/angular-material.min.css" rel="stylesheet" type="text/css" />
+    <title>TierraCode</title>
+</head>
 
-        <script src="scripts/angular.min.js" type="text/javascript"></script>        
-        <script src="scripts/angular-animate.min.js" type="text/javascript"></script>
-        <script src="scripts/angular-aria.min.js" type="text/javascript"></script>
-        <script src="scripts/angular-material.min.js" type="text/javascript"></script>
-        <script src="scripts/angular-messages.min.js" type="text/javascript"></script>
-        <script src="scripts/angular-sanitize.min.js" type="text/javascript"></script>
-        <script src="scripts/angular-ui-router.min.js" type="text/javascript"></script>
-        <script src="app/app.main.js" type="text/javascript"></script>        
-        <script src="app/app.constant.js" type="text/javascript"></script>        
-        <script src="app/shared/services/tierra.service.js" type="text/javascript"></script>        
-        <script src="app/features/home/home.main.js" type="text/javascript"></script>
-        <script src="app/features/home/home.config.js" type="text/javascript"></script>
-        <script src="app/features/home/home.controller.js" type="text/javascript"></script>
-        <script src="app/features/header/header.main.js" type="text/javascript"></script>
-        <script src="app/features/header/header.controller.js" type="text/javascript"></script>
-        <script src="app/features/sidenav/sidenav.main.js" type="text/javascript"></script>
-        <script src="app/features/sidenav/sidenav.controller.js" type="text/javascript"></script>
-        <script src="app/features/user/user.main.js" type="text/javascript"></script>
-        <script src="app/features/user/user.controller.js" type="text/javascript"></script>
-    </body>
+<body ng-cloak>
+    <div ui-view="header"></div>
+    <div ui-view="body"></div>
+    <div ui-view="sidenav"></div>
+
+    <script src="scripts/angular.min.js" type="text/javascript"></script>
+    <script src="scripts/angular-animate.min.js" type="text/javascript"></script>
+    <script src="scripts/angular-aria.min.js" type="text/javascript"></script>
+    <script src="scripts/angular-material.min.js" type="text/javascript"></script>
+    <script src="scripts/angular-messages.min.js" type="text/javascript"></script>
+    <script src="scripts/angular-sanitize.min.js" type="text/javascript"></script>
+    <script src="scripts/angular-ui-router.min.js" type="text/javascript"></script>
+    <script src="scripts/ng-cordova.min.js" type="text/javascript"></script>
+    <script src="cordova.js" type="text/javascript" ></script>
+    <script src="app/app.main.js" type="text/javascript"></script>
+    <script src="app/app.constant.js" type="text/javascript"></script>
+    <script src="app/shared/services/tierra.service.js" type="text/javascript"></script>
+    <script src="app/features/home/home.main.js" type="text/javascript"></script>
+    <script src="app/features/home/home.config.js" type="text/javascript"></script>
+    <script src="app/features/home/home.controller.js" type="text/javascript"></script>
+    <script src="app/features/header/header.main.js" type="text/javascript"></script>
+    <script src="app/features/header/header.controller.js" type="text/javascript"></script>
+    <script src="app/features/sidenav/sidenav.main.js" type="text/javascript"></script>
+    <script src="app/features/sidenav/sidenav.controller.js" type="text/javascript"></script>
+    <script src="app/features/user/user.main.js" type="text/javascript"></script>
+    <script src="app/features/user/user.controller.js" type="text/javascript"></script>
+</body>
+
 </html>
