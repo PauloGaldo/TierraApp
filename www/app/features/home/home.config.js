@@ -18,8 +18,8 @@
                     'Content-type': 'application/json'
                 },
                 params: {
-                    username: 'paulogaldo',
-                    password: '30169260',
+                    username: '',
+                    password: '',
                     grant_type: 'password'
                 }
             }).then(function successCallback(response) {
