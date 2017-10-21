@@ -1,43 +1,48 @@
 {
-  "name": "ar.com.tierra.app",
-  "displayName": "HelloCordova",
-  "version": "1.0.0",
-  "description": "A sample Apache Cordova application that responds to the deviceready event.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "copy-angular": "copy .\\node_modules\\angular\\angular.min.js .\\www\\scripts\\",
-    "copy-angular-animate": "copy .\\node_modules\\angular-animate\\angular-animate.min.js .\\www\\scripts\\",
-    "copy-angular-messages": "copy .\\node_modules\\angular-messages\\angular-messages.min.js .\\www\\scripts\\",
-    "copy-angular-aria": "copy .\\node_modules\\angular-aria\\angular-aria.min.js .\\www\\scripts\\",
-    "copy-angular-material": "copy .\\node_modules\\angular-material\\angular-material.min.js .\\www\\scripts\\",
-    "copy-angular-material-css": "copy .\\node_modules\\angular-material\\angular-material.min.css .\\www\\styles\\",
-    "copy-angular-sanitize": "copy .\\node_modules\\angular-sanitize\\angular-sanitize.min.js .\\www\\scripts\\",
-    "copy-angular-ui-router": "copy .\\node_modules\\@uirouter\\angularjs\\release\\angular-ui-router.min.js .\\www\\scripts\\"
-  },
-  "author": "Apache Cordova Team",
-  "license": "Apache-2.0",
-  "dependencies": {
-    "@uirouter/angularjs": "^1.0.10",
-    "angular": "^1.6.6",
-    "angular-animate": "^1.6.6",
-    "angular-aria": "^1.6.6",
-    "angular-material": "^1.1.5",
-    "angular-messages": "^1.6.6",
-    "angular-sanitize": "^1.6.6",
-    "cordova-android": "^6.3.0",
-    "cordova-browser": "^5.0.1",
-    "cordova-plugin-browsersync": "^1.1.0",
-    "cordova-plugin-whitelist": "^1.3.2"
-  },
-  "cordova": {
-    "plugins": {
-      "cordova-plugin-whitelist": {},
-      "cordova-plugin-browsersync": {}
+    "name": "ar.com.tierra.app",
+    "displayName": "HelloCordova",
+    "version": "1.0.0",
+    "description": "A sample Apache Cordova application that responds to the deviceready event.",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "copy-angular": "copy .\\node_modules\\angular\\angular.min.js .\\www\\scripts\\",
+        "copy-angular-animate": "copy .\\node_modules\\angular-animate\\angular-animate.min.js .\\www\\scripts\\",
+        "copy-angular-messages": "copy .\\node_modules\\angular-messages\\angular-messages.min.js .\\www\\scripts\\",
+        "copy-angular-aria": "copy .\\node_modules\\angular-aria\\angular-aria.min.js .\\www\\scripts\\",
+        "copy-angular-material": "copy .\\node_modules\\angular-material\\angular-material.min.js .\\www\\scripts\\",
+        "copy-angular-material-css": "copy .\\node_modules\\angular-material\\angular-material.min.css .\\www\\styles\\",
+        "copy-angular-sanitize": "copy .\\node_modules\\angular-sanitize\\angular-sanitize.min.js .\\www\\scripts\\",
+        "copy-angular-ui-router": "copy .\\node_modules\\@uirouter\\angularjs\\release\\angular-ui-router.min.js .\\www\\scripts\\"
     },
-    "platforms": [
-      "browser",
-      "android"
-    ]
-  }
+    "author": "Apache Cordova Team",
+    "license": "Apache-2.0",
+    "dependencies": {
+        "@uirouter/angularjs": "^1.0.10",
+        "angular": "^1.6.6",
+        "angular-animate": "^1.6.6",
+        "angular-aria": "^1.6.6",
+        "angular-material": "^1.1.5",
+        "angular-messages": "^1.6.6",
+        "angular-sanitize": "^1.6.6",
+        "cordova-android": "^6.2.3",
+        "cordova-browser": "^5.0.1",
+        "cordova-plugin-browsersync": "^1.1.0",
+        "cordova-plugin-compat": "^1.0.0",
+        "cordova-plugin-multidex": "^0.1.4",
+        "cordova-plugin-whitelist": "^1.3.2",
+        "phonegap-plugin-barcodescanner": "^6.0.8"
+    },
+    "cordova": {
+        "plugins": {
+            "cordova-plugin-whitelist": {},
+            "cordova-plugin-browsersync": {},
+            "cordova-plugin-multidex": {},
+            "phonegap-plugin-barcodescanner": {}
+        },
+        "platforms": [
+            "android",
+            "browser"
+        ]
+    }
 }
