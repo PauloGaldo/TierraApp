@@ -2,12 +2,12 @@
     'use strict';
 
     angular
-            .module('tierra.code.login')
-            .controller('LoginCtrl', LoginCtrl);
+        .module('tierra.code.login')
+        .controller('LoginCtrl', LoginCtrl);
 
-    LoginCtrl.$inject = ['TierraService', '$state', '$scope', '$window', '$timeout'];
+    LoginCtrl.$inject = ['TierraService', '$state', '$scope', '$window', '$timeout', 'toaster'];
 
-    function LoginCtrl(TierraService, $state, $scope, $window, $timeout) {
+    function LoginCtrl(TierraService, $state, $scope, $window, $timeout, toaster) {
         var vm = this;
         /*VARIABLES*/
         vm.form_login = {
@@ -30,15 +30,24 @@
             });
             if (form.$valid) {
                 TierraService
-                        .loginUser(model)
-                        .then(function (response) {
-                            console.log(response);
+                    .loginUser(model)
+                    .then(function (response) {
+                        console.log(response);
+                        if (!response) {
+                            toaster.pop({
+                                type: 'error',
+                                title: 'Error',
+                                body: 'Error al iniciar sesion',
+                                timeout: 3000
+                            });
+                        } else {
                             if (response.status === 200) {
                                 localStorage.setItem('token', angular.toJson(response.data));
                                 StatusBar.backgroundColorByHexString('#689F38');
                                 $state.go('home');
                             }
-                        });
+                        }
+                    });
             }
         }
 

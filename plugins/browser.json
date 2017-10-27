@@ -1,24 +1,24 @@
 {
-  "prepare_queue": {
-    "installed": [],
-    "uninstalled": []
-  },
-  "config_munge": {
-    "files": {}
-  },
-  "installed_plugins": {
-    "cordova-plugin-browsersync": {
-      "PACKAGE_NAME": "ar.tierra.app"
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
     },
-    "cordova-plugin-whitelist": {
-      "PACKAGE_NAME": "ar.tierra.app"
+    "config_munge": {
+        "files": {}
     },
-    "phonegap-plugin-barcodescanner": {
-      "PACKAGE_NAME": "ar.tierra.app"
+    "installed_plugins": {
+        "cordova-plugin-browsersync": {
+            "PACKAGE_NAME": "ar.tierra.app"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "ar.tierra.app"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "ar.tierra.app"
+        },
+        "phonegap-plugin-barcodescanner": {
+            "PACKAGE_NAME": "ar.tierra.app"
+        }
     },
-    "cordova-plugin-statusbar": {
-      "PACKAGE_NAME": "ar.tierra.app"
-    }
-  },
-  "dependent_plugins": {}
+    "dependent_plugins": {}
 }
