@@ -15,7 +15,8 @@
         'tierra.code.home',
         'tierra.code.header',
         'tierra.code.sidenav',
-        'tierra.code.user'
+        'tierra.code.user',
+        'tierra.code.login'
     ]);
 
 

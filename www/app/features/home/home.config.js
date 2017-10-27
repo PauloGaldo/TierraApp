@@ -9,30 +9,46 @@
 
     function config($stateProvider, $urlRouterProvider) {
 
-        function auth($http, Constants) {
+        function userDetails($http, $q, Constants) {
+            var token = angular.fromJson(localStorage.getItem('token'));
+            var deferred = $q.defer();
             $http({
-                url: Constants.API_URL + 'oauth/token',
-                method: 'POST',
+                url: Constants.API_URL + 'usuarios/detail',
+                method: 'GET',
                 headers: {
-                    'Authorization': 'Basic bmF0dXJhYXBwOjEyMzQ1Ng==',
+                    'Authorization': 'Bearer ' + token.access_token,
                     'Content-type': 'application/json'
-                },
-                params: {
-                    username: '',
-                    password: '',
-                    grant_type: 'password'
                 }
             }).then(function successCallback(response) {
-                localStorage.setItem('token', angular.toJson(response.data));
+                deferred.resolve(response);
             }, function errorCallback(response) {
-                localStorage.setItem('token', null);
+                deferred.resolve(null);
             });
+            return deferred.promise;
         }
 
         $stateProvider
-                .state('home', {
+                .state('login', {
                     url: '/',
-                    resolve: {auth: auth},
+                    views: {
+                        'header': {
+                            templateUrl: null,
+                            controller: null
+                        },
+                        'body': {
+                            templateUrl: "app/features/login/login.html",
+                            controller: 'LoginCtrl',
+                            controllerAs: 'login'
+                        },
+                        'sidenav': {
+                            templateUrl: "app/features/sidenav/sidenav.html",
+                            controller: null
+                        }
+                    }
+                })
+                .state('home', {
+                    url: '/home',
+                    resolve: {User: userDetails},
                     views: {
                         'header': {
                             templateUrl: "app/features/header/header.html",
@@ -53,6 +69,7 @@
                 })
                 .state('home.profile', {
                     url: 'profile/:user_id',
+                    resolve: {User: userDetails},
                     views: {
                         'content': {
                             templateUrl: "app/features/user/profile.html",

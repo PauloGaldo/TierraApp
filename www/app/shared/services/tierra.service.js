@@ -7,16 +7,21 @@
 
     TierraService.$inject = ['$http', '$q', 'Constants'];
 
-    function TierraService($http, $q, Constants) {
+    function TierraService($http, $q, Constants) {        
 
-        this.userDetails = function (token) {
+        this.loginUser = function (params) {
             var deferred = $q.defer();
             $http({
-                url: Constants.API_URL + 'usuarios/detail',
-                method: 'GET',
+                url: Constants.API_URL + 'oauth/token',
+                method: 'POST',
                 headers: {
-                    'Authorization': 'Bearer ' + token,
+                    'Authorization': 'Basic bmF0dXJhYXBwOjEyMzQ1Ng==',
                     'Content-type': 'application/json'
+                },
+                params: {
+                    username: params.username.trim(),
+                    password: params.password.trim(),
+                    grant_type: 'password'
                 }
             }).then(function successCallback(response) {
                 deferred.resolve(response);
@@ -25,6 +30,8 @@
             });
             return deferred.promise;
         };
+        
+        
 
     }
 

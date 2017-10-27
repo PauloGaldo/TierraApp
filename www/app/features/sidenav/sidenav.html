@@ -3,12 +3,12 @@
         class="md-sidenav-left"
         md-component-id="left"
         md-whiteframe="5">
-        <md-toolbar class="md-theme-indigo" style="height: 120px;">
+        <md-toolbar class="md-theme-indigo" style="height: 120px;" md-colors="{background: 'light-green'}">
             <md-contant layout="row" layout-padding>
                 <div flex="30">
-                    <img ng-src="data:image/JPEG;base64,{{sidenav.user.imagen}}" class="md-avatar" id="avatar">
+                    <img ng-src="data:image/JPEG;base64,{{sidenav.user.imagen}}" class="md-avatar" id="avatar" style="border: 3px solid white;">
                 </div>
-                <div flex="70">
+                <div flex="70" style="color: white;">
                     <h3 style="font-weight: bolder; margin-bottom: 0px;">¡Hola {{sidenav.user.nombre}}!</h3>        
                     <h3 style="font-size: 15px; font-weight: normal; margin-top: 0px;">{{sidenav.user.email}}</h3>        
                 </div>
@@ -16,7 +16,7 @@
         </md-toolbar>
         <md-content>
             <md-list flex>
-                <md-list-item class="md-3-line" ng-click="sidenav.goToProfile(sidenav.user.idUsuario)">
+                <md-list-item class="md-2-line" ng-click="sidenav.goToProfile(sidenav.user.idUsuario)">
                     <i class="material-icons">&#xE7FD;</i>
                     <div class="md-list-item-text" layout="column" style="margin-left: 15px;">
                         <h3>Mi cuenta</h3>                        

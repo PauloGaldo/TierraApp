@@ -1,3 +1,67 @@
-<div>USUARIO EN CONSTRUCCION {{user.barcode | json}}
-
+<div>
+    <md-content layout-xs="column" layout="row">        
+        <md-card style="margin: 0px;">
+            <img ng-src="data:image/JPEG;base64,{{user.userLogged.imagen}}" class="md-card-image" alt="Washed Out">
+            <md-card-title>
+                <md-card-title-text>
+                    <span class="md-headline">{{user.userLogged.nombre}} {{user.userLogged.apellido}}</span>
+                </md-card-title-text>
+                <md-divider></md-divider>
+            </md-card-title>
+            <md-card-content style="padding: 0;">
+                <md-list>
+                    <md-list-item class="md-3-line">
+                        <div class="md-list-item-text">
+                            <h4>D.N.I.</h4>
+                            <p>{{user.userLogged.dni|number:0}}</p>
+                        </div>
+                        <md-divider ng-if="!$last"></md-divider>
+                    </md-list-item>
+                    <md-list-item class="md-3-line">
+                        <div class="md-list-item-text">
+                            <h4>Fecha de nac.</h4>
+                            <p>{{user.userLogged.fechaNacimiento| date: 'fullDate'}}</p>
+                        </div>
+                        <md-divider ng-if="!$last"></md-divider>
+                    </md-list-item>
+                    <md-list-item class="md-3-line">
+                        <div class="md-list-item-text">
+                            <h4>Email</h4>
+                            <p>{{user.userLogged.email}}</p>
+                        </div>
+                        <md-divider ng-if="!$last"></md-divider>
+                    </md-list-item>
+                    <md-list-item class="md-3-line">
+                        <div class="md-list-item-text">
+                            <h4>Télefono</h4>
+                            <p>{{user.userLogged.telefono}}</p>
+                        </div>
+                        <md-divider ng-if="!$last"></md-divider>
+                    </md-list-item>
+                    <md-list-item class="md-3-line">
+                        <div class="md-list-item-text">
+                            <h4>Rol</h4>
+                            <p>{{user.userLogged.roles.nombreRol}}</p>
+                        </div>
+                        <md-divider ng-if="!$last"></md-divider>
+                    </md-list-item>
+                    <md-list-item class="md-3-line">
+                        <div class="md-list-item-text">
+                            <h4>Estado</h4>
+                            <p flex ng-if="user.userLogged.estado === true">Activo</p>
+                            <p flex ng-if="user.userLogged.estado === false">Inactivo</p>
+                        </div>
+                        <md-divider ng-if="!$last"></md-divider>
+                    </md-list-item>
+                    <md-list-item class="md-3-line">
+                        <div class="md-list-item-text">
+                            <h4>Sucursal</h4>
+                            <p>{{user.userLogged.usuarioSucursal.nombreSucursal}}</p>
+                        </div>
+                        <md-divider ng-if="!$last"></md-divider>
+                    </md-list-item>
+                </md-list>
+            </md-card-content>
+        </md-card>        
+    </md-content>    
 </div>

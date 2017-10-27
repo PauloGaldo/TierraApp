@@ -5,30 +5,25 @@
         .module('tierra.code.user')
         .controller('UserCtrl', UserCtrl);
 
-    UserCtrl.$inject = ['$scope', 'TierraService', '$cordovaBarcodeScanner'];
+    UserCtrl.$inject = ['$scope', 'TierraService', '$cordovaBarcodeScanner', 'User'];
 
-    function UserCtrl($scope, TierraService, $cordovaBarcodeScanner) {
+    function UserCtrl($scope, TierraService, $cordovaBarcodeScanner, User) {
         var vm = this;
         vm.user = null;
         vm.barcode = null;
+        vm.userLogged = null;
 
         /**
          * Evento lanzado al terminar la carga del template desde ui.router
          */
         $scope.$on('$viewContentLoaded', function () {
-            showUserDetails();
-            scanBarcode();
+//            scanBarcode();
+            vm.userLogged = User.data;
         });
 
 
         function showUserDetails() {
-            var token = angular.fromJson(localStorage.getItem('token'));
-            TierraService
-                .userDetails(token.access_token)
-                .then(function (response) {
-                    vm.user = response.data;
-                    console.log(response.data);
-                });
+            
         }
 
         function scanBarcode() {

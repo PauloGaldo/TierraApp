@@ -1,0 +1,52 @@
+<div class="container_login"
+     layout="column"
+     style="height: 100vh;"
+     md-colors="{background: 'amber'}"
+     layout-padding layout-margin layout-fill>
+    <md-content class="md-no-momentum"
+                layout="column"
+                md-colors="{background: 'light-green'}"
+                style="height: 10vh; margin-top: auto; margin-bottom: 0px; text-align: center; border-top-left-radius: 25px; border-top-right-radius: 25px;">
+        <h3 style="margin: auto; color: #fff;">BIENVENIDO</h3>
+    </md-content>
+    <md-content class="md-no-momentum"
+                layout="column"
+                style="height: 85vh; margin-top: 0px; margin-bottom: auto; border-bottom-right-radius: 25px; border-bottom-left-radius: 25px;">
+        <form name="login_form" novalidate ng-submit="login.loginUser(login.form_login, login_form);">
+            <md-container layout="row" flex
+                          style="margin-bottom: 20px; height: 20vh;">
+                <md-icon class="material-icons md-dark md-80" style="border-radius: 80px" md-colors="{color: 'blue'}">person_pin</md-icon>
+            </md-container>
+            <md-input-container class="md-block" flex>
+                <label>Usuario</label>
+                <md-icon class="material-icons">&#xE7FD;</md-icon>  
+                <input md-maxlength="30" required name="username"
+                       ng-trim="true" ng-model="login.form_login.username"/>
+                <div ng-messages="login_form.username.$error"
+                     ng-if='login_form.username.$dirty || login_form.username.$touched'>
+                    <div ng-message="required">Este campo no puede estar vacio.</div>
+                    <div ng-message="md-maxlength">El nombre de usuario es demasiado largo</div>
+                </div>
+            </md-input-container>
+            <md-input-container class="md-block" flex>
+                <label>Contraseña</label>
+                <md-icon class="material-icons">&#xE90D;</md-icon>
+                <input md-maxlength="30" type="password" required name="password" ng-model="login.form_login.password"/>
+                <div ng-messages="login_form.password.$error"
+                     ng-if='login_form.password.$dirty || login_form.password.$touched'>
+                    <div ng-message="required">Este campo no puede estar vacio.</div>
+                    <div ng-message="md-maxlength">El nombre de usuario es demasiado largo</div>
+                </div>
+            </md-input-container>
+            <md-container layout="column">
+                <md-button class="md-raised" type="submit" md-colors="{background: 'blue'}" flex>Login</md-button>
+            </md-container>            
+        </form>        
+    </md-content>
+</div>
+<style>
+    md-icon {
+        height: auto !important;
+        width: auto !important;
+    }
+</style>

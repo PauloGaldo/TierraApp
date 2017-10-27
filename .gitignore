@@ -1,10 +1,5 @@
 /node_modules
 /nbproject
-/platforms/android/
-/platforms/browser/
-/plugins/cordova-plugin-browsersync/
-/plugins/cordova-plugin-whitelist/
-/plugins/cordova-plugin-compat/
-/plugins/cordova-plugin-multidex/
-/plugins/phonegap-plugin-barcodescanner/
+/platforms/*
+/plugins/*
 /bower_components
