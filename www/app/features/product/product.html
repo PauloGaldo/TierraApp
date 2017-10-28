@@ -1,0 +1,84 @@
+<div class="anim-slide-below-fade">
+    <md-content layout-xs="column" layout="row">        
+        <md-card style="margin: 0px;">
+            <angular-barcode ng-model="product.item.codigoProducto"
+                             bc-options="product.bc" 
+                             bc-class="barcode"
+                             style='text-align: center;'
+                             bc-type="img"></angular-barcode>            
+            <md-card-title>
+                <md-card-title-text>
+                    <span class="md-headline">{{product.item.descripcion}}</span>
+                </md-card-title-text>
+                <md-divider></md-divider>
+            </md-card-title>
+            <md-card-content style="padding: 0;">
+                <md-list>
+                    <md-list-item class="md-3-line">
+                        <div class="md-list-item-text">
+                            <h4>Categoria</h4>
+                            <p>{{product.item.categoria.nombreCategoria}}</p>
+                        </div>
+                        <md-divider ng-if="!$last"></md-divider>
+                    </md-list-item>
+                    <md-list-item class="md-3-line">
+                        <div class="md-list-item-text">
+                            <h4>Color</h4>
+                            <p>{{product.item.colorProducto}}</p>
+                        </div>
+                        <md-divider ng-if="!$last"></md-divider>
+                    </md-list-item>
+                    <md-list-item class="md-3-line">
+                        <div class="md-list-item-text">
+                            <h4>Talla</h4>
+                            <p>{{product.item.talla}}</p>
+                        </div>
+                        <md-divider ng-if="!$last"></md-divider>
+                    </md-list-item>
+                    <md-list-item class="md-3-line">
+                        <div class="md-list-item-text">
+                            <h4>Temporada</h4>
+                            <p>{{product.item.temporada.nombreTemporada}}</p>
+                        </div>
+                        <md-divider ng-if="!$last"></md-divider>
+                    </md-list-item>
+                    <md-list-item class="md-3-line">
+                        <div class="md-list-item-text">
+                            <h4>Marca</h4>
+                            <p>{{product.item.marcas.nombreMarca}}</p>
+                        </div>
+                        <md-divider ng-if="!$last"></md-divider>
+                    </md-list-item>
+                    <md-list-item class="md-3-line">
+                        <div class="md-list-item-text">
+                            <h4>Sexo</h4>
+                            <p>{{product.item.sexo.nombreSexo}}</p>
+                        </div>
+                        <md-divider ng-if="!$last"></md-divider>
+                    </md-list-item>
+                    <md-list-item class="md-3-line">
+                        <div class="md-list-item-text">
+                            <h4>Cantidad</h4>
+                            <p>{{product.item.cantidadTotal}}</p>
+                        </div>
+                        <md-divider ng-if="!$last"></md-divider>
+                    </md-list-item>
+                    <md-list-item class="md-3-line">
+                        <div class="md-list-item-text">
+                            <h4>Precio</h4>
+                            <p>{{product.item.precioCosto|currency}}</p>
+                        </div>
+                        <md-divider ng-if="!$last"></md-divider>
+                    </md-list-item>
+                    <md-list-item class="md-3-line">
+                        <div class="md-list-item-text">
+                            <h4>Proveedor</h4>
+                            <p>{{product.item.facturaProducto.proveedor.nombreProveedor}}</p>
+                        </div>
+                        <md-divider ng-if="!$last"></md-divider>
+                    </md-list-item>
+                </md-list>
+            </md-card-content>
+        </md-card>        
+    </md-content>    
+</div>
