@@ -110,6 +110,19 @@
                             controllerAs: 'user'
                         }
                     }
+                })
+                .state('home.product', {
+                    url: '/product/:id',
+                    resolve: {
+                        isAuth: authenticate
+                    },
+                    views: {
+                        'content': {
+                            templateUrl: "app/features/product/product.html",
+                            controller: 'ProductCtrl',
+                            controllerAs: 'product'
+                        }
+                    }
                 });
 
         $urlRouterProvider.otherwise('/');

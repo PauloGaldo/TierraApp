@@ -20,7 +20,8 @@
     "copy-angular-loading-bar-css": "copy .\\node_modules\\angular-loading-bar\\build\\loading-bar.min.css .\\www\\styles\\",
     "copy-angular-locale": "copy .\\node_modules\\angular-i18n\\angular-locale_es-es.js .\\www\\scripts\\",
     "copy-angular-ui-router-anim-in-out": "copy .\\node_modules\\angular-ui-router-anim-in-out\\anim-in-out.js .\\www\\scripts\\",
-    "copy-angular-ui-router-anim-in-out-css": "copy .\\node_modules\\angular-ui-router-anim-in-out\\css\\anim-in-out.css .\\www\\styles\\"
+    "copy-angular-ui-router-anim-in-out-css": "copy .\\node_modules\\angular-ui-router-anim-in-out\\css\\anim-in-out.css .\\www\\styles\\",
+    "copy-angular-barcode": "copy .\\node_modules\\angular-barcode\\dist\\angular-barcode.js .\\www\\scripts\\"
   },
   "author": "Paulo Galdo",
   "license": "Apache-2.0",

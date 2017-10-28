@@ -15,12 +15,14 @@
         'toaster',
         'angular-loading-bar',
         'anim-in-out',
+        'angular-barcode',
         /*Medulos proyecto*/
         'tierra.code.home',
         'tierra.code.header',
         'tierra.code.sidenav',
         'tierra.code.user',
-        'tierra.code.login'
+        'tierra.code.login',
+        'tierra.code.product'
     ]);
 
 
