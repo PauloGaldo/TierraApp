@@ -5,9 +5,9 @@
             .module('tierra.code.login')
             .controller('LoginCtrl', LoginCtrl);
 
-    LoginCtrl.$inject = ['TierraService', '$state', '$scope', '$window', '$timeout'];
+    LoginCtrl.$inject = ['TierraService', '$state', '$scope', '$window', '$timeout', '$uiRouter'];
 
-    function LoginCtrl(TierraService, $state, $scope, $window, $timeout) {
+    function LoginCtrl(TierraService, $state, $scope, $window, $timeout, $uiRouter) {
         var vm = this;
         /*VARIABLES*/
         vm.form_login = {

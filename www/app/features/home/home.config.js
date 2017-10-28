@@ -30,6 +30,14 @@
         $stateProvider
                 .state('login', {
                     url: '/',
+                    resolve: {
+                        validate: function ($q, $state) {
+                            if (localStorage.getItem('token')) {
+                                $state.go('home');
+                                return $q.reject('Theres already a token');
+                            }
+                        }
+                    },
                     views: {
                         'header': {
                             templateUrl: null,
@@ -68,7 +76,7 @@
                     }
                 })
                 .state('home.profile', {
-                    url: 'profile/:user_id',
+                    url: '/profile/:user_id',
                     resolve: {User: userDetails},
                     views: {
                         'content': {
