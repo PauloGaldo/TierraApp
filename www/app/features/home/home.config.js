@@ -27,6 +27,25 @@
             return deferred.promise;
         }
 
+        function authenticate($http, $state, Constants) {
+            var token = angular.fromJson(localStorage.getItem('token'));
+            $http({
+                url: Constants.API_URL + 'usuarios/logged',
+                method: 'post',
+                headers: {
+                    'Authorization': 'Bearer ' + token.acces_token,
+                    'Content-type': 'application/json'
+                }
+            }).then(function successCallback(response) {
+                /*nada por ahora*/
+            }, function errorCallback(response) {
+                if (response.status === 401) {
+                    localStorage.clear();
+                    $state.go('login');
+                }
+            });
+        }
+
         $stateProvider
                 .state('login', {
                     url: '/',
@@ -56,7 +75,10 @@
                 })
                 .state('home', {
                     url: '/home',
-                    resolve: {User: userDetails},
+                    resolve: {
+                        User: userDetails,
+                        isAuth: authenticate
+                    },
                     views: {
                         'header': {
                             templateUrl: "app/features/header/header.html",
@@ -77,7 +99,10 @@
                 })
                 .state('home.profile', {
                     url: '/profile/:user_id',
-                    resolve: {User: userDetails},
+                    resolve: {
+                        User: userDetails,
+                        isAuth: authenticate
+                    },
                     views: {
                         'content': {
                             templateUrl: "app/features/user/profile.html",

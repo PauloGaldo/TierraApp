@@ -21,6 +21,7 @@
                 <label>Usuario</label>
                 <md-icon class="material-icons">&#xE7FD;</md-icon>  
                 <input md-maxlength="30" required name="username"
+                       placeholder="Ingresa tu nombre de usuario"
                        ng-trim="true" ng-model="login.form_login.username"/>
                 <div ng-messages="login_form.username.$error"
                      ng-if='login_form.username.$dirty || login_form.username.$touched'>
@@ -31,7 +32,9 @@
             <md-input-container class="md-block" flex>
                 <label>Contraseña</label>
                 <md-icon class="material-icons">&#xE897;</md-icon>
-                <input md-maxlength="30" type="password" required name="password" ng-model="login.form_login.password"/>
+                <input md-maxlength="30" type="password"
+                       placeholder="Ingresa tu contraseña"
+                       required name="password" ng-model="login.form_login.password"/>
                 <div ng-messages="login_form.password.$error"
                      ng-if='login_form.password.$dirty || login_form.password.$touched'>
                     <div ng-message="required">Este campo no puede estar vacio.</div>
