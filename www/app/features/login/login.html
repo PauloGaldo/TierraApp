@@ -1,4 +1,4 @@
-<div class="container_login"
+<div class="container_login anim-slide-below-fade"
      layout="column"
      style="height: 100vh;"
      md-colors="{background: 'amber'}"
@@ -11,7 +11,7 @@
     </md-content>
     <md-content class="md-no-momentum"
                 layout="column"
-                style="height: 85vh; margin-top: 0px; margin-bottom: auto; border-bottom-right-radius: 25px; border-bottom-left-radius: 25px;">
+                style="height: 85vh; margin-top: 0px; margin-bottom: auto; border-bottom-right-radius: 25px; border-bottom-left-radius: 25px; z-index: 100;">
         <form name="login_form" novalidate ng-submit="login.loginUser(login.form_login, login_form);">
             <md-container layout="row" flex
                           style="margin-bottom: 20px; height: 20vh;">

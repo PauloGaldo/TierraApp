@@ -42,7 +42,7 @@
                             });
                         } else {
                             if (response.status === 200) {
-                                localStorage.setItem('token', angular.toJson(response.data));
+                                localStorage.setItem('token', angular.toJson(response.data.access_token));
                                 StatusBar.backgroundColorByHexString('#689F38');
                                 $state.go('home');
                             }

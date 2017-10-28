@@ -42,3 +42,23 @@
     /* Support for IE. */
     font-feature-settings: 'liga';
 }
+#loading-bar .bar {
+    background: #2E7D32 !important;
+}
+#loading-bar-spinner{
+    position: inherit !important;
+    /*height: 100% !important;*/
+    left: 0px !important;
+    z-index: 50 !important;
+}
+#loading-bar-spinner .spinner-icon {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30vh;
+    width: 80px !important;
+    height: 80px !important;
+    border: solid 3px transparent !important;
+    border-top-color: #2E7D32 !important;
+    border-left-color: #2E7D32 !important;
+    border-radius: 80px !important;
+}

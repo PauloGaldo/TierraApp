@@ -37,51 +37,55 @@
         <link href="styles/angular-material.min.css" rel="stylesheet" type="text/css" />
         <link href="styles/toaster.min.css" rel="stylesheet" type="text/css" />
         <link href="styles/loading-bar.min.css" rel="stylesheet" type="text/css"/>
+        <link href="styles/anim-in-out.css" rel="stylesheet" type="text/css"/>
         <title>TierraCode</title>
     </head>
 
     <body ng-cloak>
         <div ui-view="header"></div>
-        <div ui-view="body"></div>
-        <div ui-view="sidenav"></div>
-        <toaster-container toaster-options="{'time-out': 3000, 'close-button':true, 'animation-class': 'toast-top-center'}"></toaster-container>       
+        <div ui-view="body" 
+             style="position: absolute; width: 100%;"
+             class="anim-in-out anim-slide-below-fade"></div>
+        <div ui-view="sidenav"></div>        
+    <toaster-container toaster-options="{'time-out': 3000, 'close-button':true, 'animation-class': 'toast-top-center'}"></toaster-container>       
 
-        <script src="scripts/angular.min.js" type="text/javascript"></script>
-        <script src="scripts/angular-animate.min.js" type="text/javascript"></script>
-        <script src="scripts/angular-aria.min.js" type="text/javascript"></script>
-        <script src="scripts/angular-material.min.js" type="text/javascript"></script>
-        <script src="scripts/angular-messages.min.js" type="text/javascript"></script>
-        <script src="scripts/angular-sanitize.min.js" type="text/javascript"></script>
-        <script src="scripts/angular-ui-router.min.js" type="text/javascript"></script>
-        <script src="scripts/angular-touch.min.js" type="text/javascript"></script>
-        <script src="scripts/toaster.min.js" type="text/javascript"></script>
-        <script src="scripts/loading-bar.min.js" type="text/javascript"></script>
-        <script src="scripts/angular-locale_es-es.js" type="text/javascript"></script>
-        <script src="scripts/ng-cordova.min.js" type="text/javascript"></script>
-        <script src="cordova.js" type="text/javascript" ></script>
-        <script src="app/app.main.js" type="text/javascript"></script>
-        <script src="app/app.constant.js" type="text/javascript"></script>
-        
-        <script src="app/shared/services/tierra.service.js" type="text/javascript"></script>
-        <script src="app/features/login/login.main.js" type="text/javascript"></script>
-        <script src="app/features/login/login.controller.js" type="text/javascript"></script>
-        <script src="app/features/home/home.main.js" type="text/javascript"></script>
-        <script src="app/features/home/home.config.js" type="text/javascript"></script>
-        <script src="app/features/home/home.controller.js" type="text/javascript"></script>
-        <script src="app/features/header/header.main.js" type="text/javascript"></script>
-        <script src="app/features/header/header.controller.js" type="text/javascript"></script>
-        <script src="app/features/sidenav/sidenav.main.js" type="text/javascript"></script>
-        <script src="app/features/sidenav/sidenav.controller.js" type="text/javascript"></script>
-        <script src="app/features/user/user.main.js" type="text/javascript"></script>
-        <script src="app/features/user/user.controller.js" type="text/javascript"></script>
-        <script src="app/app.run.js" type="text/javascript"></script>
-        <script>
-            document.addEventListener("deviceready", function () {
-                window.statusBarAndroid = StatusBar;
-                /*StatusBar.backgroundColorByHexString("#303F9F");
-                 StatusBar.hide();*/
-            }, false);
-        </script>
-    </body>
+    <script src="scripts/angular.min.js" type="text/javascript"></script>
+    <script src="scripts/angular-animate.min.js" type="text/javascript"></script>
+    <script src="scripts/angular-aria.min.js" type="text/javascript"></script>
+    <script src="scripts/angular-material.min.js" type="text/javascript"></script>
+    <script src="scripts/angular-messages.min.js" type="text/javascript"></script>
+    <script src="scripts/angular-sanitize.min.js" type="text/javascript"></script>
+    <script src="scripts/angular-ui-router.min.js" type="text/javascript"></script>
+    <script src="scripts/angular-touch.min.js" type="text/javascript"></script>
+    <script src="scripts/toaster.min.js" type="text/javascript"></script>
+    <script src="scripts/loading-bar.min.js" type="text/javascript"></script>
+    <script src="scripts/angular-locale_es-es.js" type="text/javascript"></script>
+    <script src="scripts/anim-in-out.js" type="text/javascript"></script>
+    <script src="scripts/ng-cordova.min.js" type="text/javascript"></script>
+    <script src="cordova.js" type="text/javascript" ></script>
+    <script src="app/app.main.js" type="text/javascript"></script>
+    <script src="app/app.constant.js" type="text/javascript"></script>
+
+    <script src="app/shared/services/tierra.service.js" type="text/javascript"></script>
+    <script src="app/features/login/login.main.js" type="text/javascript"></script>
+    <script src="app/features/login/login.controller.js" type="text/javascript"></script>
+    <script src="app/features/home/home.main.js" type="text/javascript"></script>
+    <script src="app/features/home/home.config.js" type="text/javascript"></script>
+    <script src="app/features/home/home.controller.js" type="text/javascript"></script>
+    <script src="app/features/header/header.main.js" type="text/javascript"></script>
+    <script src="app/features/header/header.controller.js" type="text/javascript"></script>
+    <script src="app/features/sidenav/sidenav.main.js" type="text/javascript"></script>
+    <script src="app/features/sidenav/sidenav.controller.js" type="text/javascript"></script>
+    <script src="app/features/user/user.main.js" type="text/javascript"></script>
+    <script src="app/features/user/user.controller.js" type="text/javascript"></script>
+    <script src="app/app.run.js" type="text/javascript"></script>
+    <script>
+        document.addEventListener("deviceready", function () {
+            window.statusBarAndroid = StatusBar;
+            /*StatusBar.backgroundColorByHexString("#303F9F");
+             StatusBar.hide();*/
+        }, false);
+    </script>
+</body>
 
 </html>

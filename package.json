@@ -18,7 +18,9 @@
     "copy-angular-toaster-css": "copy .\\node_modules\\angularjs-toaster\\toaster.min.css .\\www\\styles\\",
     "copy-angular-loading-bar": "copy .\\node_modules\\angular-loading-bar\\build\\loading-bar.min.js .\\www\\scripts\\",
     "copy-angular-loading-bar-css": "copy .\\node_modules\\angular-loading-bar\\build\\loading-bar.min.css .\\www\\styles\\",
-    "copy-angular-locale": "copy .\\node_modules\\angular-i18n\\angular-locale_es-es.js .\\www\\scripts\\"
+    "copy-angular-locale": "copy .\\node_modules\\angular-i18n\\angular-locale_es-es.js .\\www\\scripts\\",
+    "copy-angular-ui-router-anim-in-out": "copy .\\node_modules\\angular-ui-router-anim-in-out\\anim-in-out.js .\\www\\scripts\\",
+    "copy-angular-ui-router-anim-in-out-css": "copy .\\node_modules\\angular-ui-router-anim-in-out\\css\\anim-in-out.css .\\www\\styles\\"
   },
   "author": "Paulo Galdo",
   "license": "Apache-2.0",
@@ -31,6 +33,7 @@
     "angular-material": "^1.1.5",
     "angular-messages": "^1.6.6",
     "angular-sanitize": "^1.6.6",
+    "angular-ui-router-anim-in-out": "^1.0.2",
     "angularjs-toaster": "^2.2.0",
     "cordova-android": "6.3.0",
     "cordova-browser": "^5.0.1",

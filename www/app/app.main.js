@@ -14,6 +14,7 @@
         'ngCordova',
         'toaster',
         'angular-loading-bar',
+        'anim-in-out',
         /*Medulos proyecto*/
         'tierra.code.home',
         'tierra.code.header',

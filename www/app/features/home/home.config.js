@@ -5,9 +5,9 @@
             .module('tierra.code.home')
             .config(config);
 
-    config.$inject = ['$stateProvider', '$urlRouterProvider'];
+    config.$inject = ['$stateProvider', '$urlRouterProvider', 'cfpLoadingBarProvider'];
 
-    function config($stateProvider, $urlRouterProvider) {
+    function config($stateProvider, $urlRouterProvider, cfpLoadingBarProvider) {
 
         function userDetails($http, $q, Constants) {
             var token = angular.fromJson(localStorage.getItem('token'));
@@ -16,7 +16,7 @@
                 url: Constants.API_URL + 'usuarios/detail',
                 method: 'GET',
                 headers: {
-                    'Authorization': 'Bearer ' + token.access_token,
+                    'Authorization': 'Bearer ' + token,
                     'Content-type': 'application/json'
                 }
             }).then(function successCallback(response) {
@@ -33,7 +33,7 @@
                 url: Constants.API_URL + 'usuarios/logged',
                 method: 'post',
                 headers: {
-                    'Authorization': 'Bearer ' + token.access_token,
+                    'Authorization': 'Bearer ' + token,
                     'Content-type': 'application/json'
                 }
             }).then(function successCallback(response) {
