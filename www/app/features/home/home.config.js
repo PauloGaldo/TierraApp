@@ -33,7 +33,7 @@
                 url: Constants.API_URL + 'usuarios/logged',
                 method: 'post',
                 headers: {
-                    'Authorization': 'Bearer ' + token.acces_token,
+                    'Authorization': 'Bearer ' + token.access_token,
                     'Content-type': 'application/json'
                 }
             }).then(function successCallback(response) {

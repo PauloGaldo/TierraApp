@@ -8,9 +8,12 @@
         'ngMessages',
         'ngMaterial',
         'ngSanitize',
+        'ngTouch',
         /*Librerias de terceros*/
         'ui.router',
         'ngCordova',
+        'toaster',
+        'angular-loading-bar',
         /*Medulos proyecto*/
         'tierra.code.home',
         'tierra.code.header',
